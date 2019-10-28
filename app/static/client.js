@@ -29,7 +29,8 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = `Result = ${response["result"]}`;
+      el("result-label").innerHTML = "Result = ${response["result"]"
+      el("result-label").attr("href","http://www.google.com/search?q="+"${response["result"]}")
     }
     el("analyze-button").innerHTML = "Analyze";
   };
