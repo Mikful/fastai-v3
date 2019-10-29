@@ -30,7 +30,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
-      var link = "http://www.google.com/search?q=" + ${response["result"]}
+      var link = "http://www.google.com/search?q=" + ${response["result"]};
       el("result-label").href = link;
     }
     el("analyze-button").innerHTML = "Analyze";
